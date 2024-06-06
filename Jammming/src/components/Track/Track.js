@@ -1,10 +1,12 @@
 import React from 'react';
 import './Track.css';
 
-function Track() {
+function Track({ track }) {
     return (
         <>
-            <p>Track</p>
+            <h2>{track.name}</h2>
+            <p>{track.artist}</p>
+            <p>{track.album}</p>
         </>
     );
 }

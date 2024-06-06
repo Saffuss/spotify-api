@@ -1,10 +1,13 @@
 import React from 'react';
 import './Tracklist.css';
+import Track from '../Track/Track';
 
-function Tracklist() {
+function Tracklist({ tracks }) {
     return (
         <>
-            <p>Tracklist</p>
+            {tracks.map((track, index) => (
+                <Track key={index} track={track} />
+            ))}
         </>
     );
 }
