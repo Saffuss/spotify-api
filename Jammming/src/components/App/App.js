@@ -26,7 +26,7 @@ function App() {
       </header>
 
       <main>
-        <SearchBar />
+        <SearchBar setSearchItems={setSearchItems} />
         <SearchResults searchItems={searchItems} setTracklistItems={setTracklistItems}  />
         <Playlist tracklistItems={tracklistItems} setTracklistItems={setTracklistItems} />
       </main>
