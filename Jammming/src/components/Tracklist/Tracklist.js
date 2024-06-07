@@ -10,14 +10,14 @@ function Tracklist({ tracklistItems, setTracklistItems }) {
     }
 
     return (
-        <>
+        <div className='tracklist'>
             {tracklistItems.map((track, index) => (
                 <div key={index} className='track-item'>
                     <Track track={track} />
                     <button type='button' onClick={() => handleClick(index) }>Remove</button>
                 </div>
             ))}
-        </>
+        </div>
     );
 }
 

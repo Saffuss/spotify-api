@@ -19,7 +19,7 @@ function App() {
     const [searchItems, setSearchItems] = useState(initialTracks);
 
   return (
-    <div className="App">
+    <div className="app">
 
       <header className="App-header">
         <h1>Jammming</h1>

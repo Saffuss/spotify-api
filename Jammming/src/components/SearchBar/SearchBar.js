@@ -27,7 +27,7 @@ function SearchBar() {
     }
 
     return (
-        <>
+        <div className='searchBar'>
             <form onSubmit={handleSubmit} className='search-bar-container'>
                 <input
                     type='text'
@@ -38,7 +38,7 @@ function SearchBar() {
                 />
                 <button type='submit'>Search</button>
             </form>
-        </>
+        </div>
     );
 }
 

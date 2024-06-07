@@ -8,14 +8,14 @@ function SearchResults({ searchItems, setTracklistItems }) {
     }
 
     return (
-        <>
+        <div className='searchResults'>
             {searchItems.map((track, index) => (
                 <>
                     <Track key={index} track={track} setTrackslistItems={setTracklistItems} />
                     <button type='button' onClick={() => handleClick(track)}>+</button>
                 </>
             ))}
-        </>
+        </div>
     );
 }
 
