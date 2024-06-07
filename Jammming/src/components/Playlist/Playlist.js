@@ -1,22 +1,11 @@
 import React from 'react';
 import './Playlist.css';
-import Track from '../Track/Track';
+import Tracklist from '../Tracklist/Tracklist';
 
-function Playlist({ playlistItems, setPlaylistItems }) {
-    function handleClick(index) {
-        setPlaylistItems((prevItems) =>
-            prevItems.filter((_, i) => i !== index)
-        )
-    }
-
+function Playlist({ tracklistItems, setTracklistItems }) {
     return (
         <>
-            {playlistItems.map((track, index) => (
-                <div key={index} className='track-item'>
-                    <Track track={track} />
-                    <button type='button' onClick={() => handleClick(index) }>Remove</button>
-                </div>
-            ))}
+            <Tracklist tracklistItems={tracklistItems} setTracklistItems={setTracklistItems} />
         </>
     );
 }
