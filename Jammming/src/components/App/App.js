@@ -5,7 +5,6 @@ import './App.css'; // Importing CSS for styling
 import Playlist from '../Playlist/Playlist';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
-import Track from '../Track/Track';
 import Tracklist from '../Tracklist/Tracklist';
 
 const initialTracks = [
@@ -29,7 +28,7 @@ function App() {
       <main>
         <SearchBar />
         <SearchResults />
-        <Playlist playlistItems={playlistItems} />
+        <Playlist playlistItems={playlistItems} setPlaylistItems={setPlaylistItems} />
         <Tracklist tracks={tracks} setPlaylistItems={setPlaylistItems} />
       </main>
     </div>
