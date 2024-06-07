@@ -7,6 +7,7 @@ function Track({ track }) {
             <h2>{track.name}</h2>
             <p>{track.artist}</p>
             <p>{track.album}</p>
+            <button type='button'>+</button>
         </>
     );
 }
