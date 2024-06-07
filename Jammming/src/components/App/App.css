@@ -1,4 +1,19 @@
+* {
+    justify-content: center;
+    text-align: center;
+}
+
 .app {
     background-color: rgb(248, 114, 215);
     border: 1px solid black;
+    height: 100vh;
+}
+
+.searchAndPlaylist {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchAndPlaylist > * {
+    width: 50%;
 }

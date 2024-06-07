@@ -9,6 +9,7 @@ function SearchResults({ searchItems, setTracklistItems }) {
 
     return (
         <div className='searchResults'>
+            <h2>Search Results</h2>
             {searchItems.map((track, index) => (
                 <>
                     <Track key={index} track={track} setTrackslistItems={setTracklistItems} />

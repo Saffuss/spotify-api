@@ -14,7 +14,7 @@ function Tracklist({ tracklistItems, setTracklistItems }) {
             {tracklistItems.map((track, index) => (
                 <div key={index} className='track-item'>
                     <Track track={track} />
-                    <button type='button' onClick={() => handleClick(index) }>Remove</button>
+                    <button type='button' onClick={() => handleClick(index) }>-</button>
                 </div>
             ))}
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SearchBar.css';
 import HandleSearchSubmit from '../HandleSearchSubmit';
 
-function SearchBar() {
+function SearchBar({ setSearchItems }) {
     const [query, setQuery] = useState('');
 
     return (
