@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Playlist.css';
 import Tracklist from '../Tracklist/Tracklist';
-import PlaylistName from '../../PlaylistName';
+import PlaylistName from '../PlaylistName';
 
 function Playlist({ tracklistItems, setTracklistItems }) {
     const [name, setName] = useState('')
