@@ -17,6 +17,8 @@ function App() {
     const [tracklistItems, setTracklistItems] = useState([]);
     const [searchItems, setSearchItems] = useState(initialTracks);
 
+    const uris = tracklistItems.map(track => track.uri);
+
   return (
     <div className="app">
 
