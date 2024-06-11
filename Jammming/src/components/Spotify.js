@@ -1,4 +1,4 @@
-const clientId = ''; // Insert client ID here.
+const clientId = '2bb296eed39c4be7bfd5ef153ef3097e'; // Insert client ID here.
 const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 let accessToken;
 

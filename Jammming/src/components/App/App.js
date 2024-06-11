@@ -5,6 +5,7 @@ import './App.css'; // Importing CSS for styling
 import Playlist from '../Playlist/Playlist';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
+import Spotify from '../Spotify.js';
 
 const initialTracks = [
     { name: "Song 1", artist: "Artist 1", album: "Album 1" },
