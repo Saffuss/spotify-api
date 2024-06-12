@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import './SearchBar.css';
 import HandleSearchSubmit from '../HandleSearchSubmit';
 
-function SearchBar({ setSearchItems }) {
+function SearchBar({ search }) {
     const [query, setQuery] = useState('');
+
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        search(query);
+    }
 
     return (
         <div className='searchBar'>
-            <form onSubmit={(e) => HandleSearchSubmit(e, query)} className='search-bar-container'>
+            <form onSubmit={handleSearchSubmit} className='search-bar-container'>
                 <input
                     type='text'
                     placeholder='Thingies...'
@@ -15,7 +20,7 @@ function SearchBar({ setSearchItems }) {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button type='submit'>Search</button>
+                <button type='submit' >Search</button>
             </form>
         </div>
     );

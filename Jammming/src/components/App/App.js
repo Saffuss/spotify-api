@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import './App.css'; // Importing CSS for styling
 
 // Import statements for the components
@@ -20,6 +20,10 @@ function App() {
 
     const uris = tracklistItems.map(track => track.uri);
 
+    const search = useCallback(term => {
+      Spotify.search(term).then(setSearchItems);
+    });
+
   return (
     <div className="app">
 
@@ -28,10 +32,10 @@ function App() {
       </header>
 
       <main>
-        <SearchBar setSearchItems={setSearchItems} />
+        <SearchBar search={search} />
         <div className='searchAndPlaylist'>
             <SearchResults searchItems={searchItems} setTracklistItems={setTracklistItems}  />
-            <Playlist tracklistItems={tracklistItems} setTracklistItems={setTracklistItems} />
+            <Playlist tracklistItems={tracklistItems} setTracklistItems={setTracklistItems} uris={uris} savePlaylist={Spotify.savePlaylist} />
         </div>
       </main>
     </div>
